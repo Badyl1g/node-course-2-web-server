@@ -36,11 +36,19 @@ app
       welcomeMessage: 'Welcome to my website'
     });
   })
+
   .get('/about', (req, res) => {
     res.render('about.hbs', {
       pageTitle: 'About Page'
     });
   })
+
+  .get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+      pageTitle: 'My Portfolio'
+    });
+  })
+  
   .get('/bad', (req, res) => {
     res.send({
       errorMessage: 'Unable to handle request'
